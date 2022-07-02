@@ -1,0 +1,69 @@
+\documentclass[../main]{subfiles}
+\begin{document}
+\label{sec:p1c2}
+
+\chapter{Cobordism Groups}
+Let $\xi$ be $U(n)$-bundle over the CW-complex $X$. Let $E$ and $E_O$ be the total spaces of the associated bundles whose fibers are respectively the unit are $E^{2n} \subset C^n$ and the unit sphere $S^{2n-1} \subset C^n$. Then the Thom complex is by definition the quotient space $E/E_0$ it is a CW-complex with base point. In particular, if we take $\xi$ to be the universal $U(n)$-bundle over $\te{BU}(n)$, then the resulting Thom complex $M(\xi)$ is written $\te{MU}(n)$.
+\begin{example}
+\label{ex:p1c02.1}
+There is homotopy equivalence $\te{MU}(1) \sim \te{BU}(1)$.
+\end{example}
+\begin{proof}
+Since $E$ is a bydle with contractible fibers, the projection $p: E \rightarrow \te{BU}(1)$ and the zero cross-section $s_0: \te{BU}(1) \rightarrow E$ are mutually inverse equivalences. Since $S^{1} = U(1`)$ and $E_0$ is the total space of the universal  $U(1)$-bundle over $\te{BU}(1)$, $E_0$ is contractible, and the quotient map $E \rightarrow E/E_0$ is homotopy equivalence
+\end{proof}
+We have an obvious map $S^2 \te{MU}(n) \underrightarrow{i_n} \te{MU}(n+1)$. In this way the sequence of spaces $(\te{MU}(0), \te{MU}(1), \te{MU}(2), \cdots , \te{MU}(n), \cdots)$ and maps $i_n$ becomes a spectrum. Associated with this spectrum we have a cohomology functor, as in G.W. Whitehead, "Generalized homology theories, "Trans. Amer. Math. Soc. 102 (1962), pp 227-283. The groups of this cohomology functor are written $\Omega_U^q (X, Y)$, and called complex cobordism groups. For other accounts, see M.F. Atiyah, "Bordism and Cobordism", Proc. Camb. Phil. Soc. 57 (1961) pp 200-208, and P.E. Conner and E.E. Floyd, "The Relation of Cobordism to K-Theories, "Springer, Lecture Notes in Mathematics No. 28, 1966, pp 25-28.
+
+We will generally suppose that this cohomology functor is defined on some category of spectra or stable objects. This assumption can easily be removed, if the reader wishes, at the cost of making some of the proof more complicated; one would have to replace the appropriate spectra by sequences of complexes approximating to them. 
+
+Next we wish to discuss the cup-products in this cohomology theory. We therefore wish to introduce the product map
+$$\mu: \te{MU} \wedge \te{MU} \rightarrow \te{MU}$$.
+Here "$\wedge$" means the smash product, and we assume that $\te{MU} \wedge \te{MU}$ can be formed in our stable category. We further assume that $\te{MU} \wedge \te{MU}$ has skeletons $(\te{MU}\wedge \te{MU})^q$, in a suitable sense, so that we have a short exact sequence 
+\begin{equation*}
+\begin{aligned}
+0 \rightarrow \displaystyle\lim_{q} {}^1 [S(\te{MU}\wedge \te{MU})^q, \te{MU}] \rightarrow [\te{MU}\wedge \te{MU}, \te{MU}] \\ \rightarrow \displaystyle\lim_{q} {}^0 [(\te{MU}_\wedge \te{MU})^q, \te{MU}]  \rightarrow 0.
+\end{aligned}
+\end{equation*}
+(Here $\lim^0$ means the inverse limit, $\lim^1$ means the first derived functor of the inverse limit, and $[X, Y]$ means the group of stable homotopy classes of maps from $X$ to$Y$ in our stable category.) In this exact sequence, the group $\lim_q  {}^1 [S(\te{MU} \wedge \te{MU})^q, \te{MU}]$ is zero. (This follows  from the facts that $H_r (\te{MU} \wedge \te{MU}) = 0$ for $r$ odd and $\pi_r (\te{MU})=0$ for r-odd -- see below. Thus the spectral sequence $H^{*} (\te{MU} \wedge \te{MU}, \pi_{*} (\te{MU})) \Rightarrow [\te{MU} \wedge \te{MU}, \te{MU}]$ has all its differentials zero.) It will therefore be sufficient to give an element of $\displaystyle\lim_q {}^{0} [(\te{MU} \wedge \te{MU})^q, \te{MU}]$ 
+
+Now, we have a map
+\[\te{BU}(n)\times \te{BU}(m) \lra \te{BU}(n+m)\]
+namely the classifying map for the Whitney sum of universal bundles over $\te{BU}(n)$ and $\te{BU}(m)$. Over this map we have map
+\[\mu_{n, m}\colon \te{MU}(n)\wedge \te{MU}(m) \lra \te{MU}(n+m)\]
+The map $\mu_{n,m}$ yield an element of $\displaystyle{\lim_{q}^{\circ}} \left[ (\te{MU} \wedge \te{MU})^q, \te{MU} \right]$, and therefore they yield a unique homotopy class of maps
+\[
+  \mu\colon  \te{MU} \wedge \te{MU} \to  \te{MU}.  
+\]
+
+The map $\mu$ is commutative and associative (up to homotopy).
+Using the map $\mu$, one introduces products in cobordism. More precisely, one has a product
+\[
+\Omega_{U}^q(X) \otimes \Omega_{U}^{q+r} (X \wedge Y)
+\]
+
+Where X and Y are spectra, and therefore a similar product for the reduced groups $\tilde{\Omega}^{\ast}_{U}$ where X and Y are spaces. For spaces we have also an external product 
+\[
+  \Omega^{q}_{U}(X,A) \otimes \Omega^{r}_{U}(Y,B) \to \Omega^{q+r}_{U}(X \times Y, A \times Y \cup X \times B)
+\]
+and an internal product
+\[
+  \Omega^{q}_{U}(X,A) \otimes \Omega^{r}_{U}(X,B) \to \Omega^{q+r}_{U}(X, A \cup  B ).
+\]
+The product satisfy the axioms which products should satisfy, that is, naturality, associativity, anticommutativity, existence of a unit, and behavior with respect to suspension or coboundary.
+
+Next we must mention the Thom isomorphism. For each U(n)-bundle $\xi$ over X the classifying map for $\xi$ induces a map
+$$
+  \gamma\colon  M(\xi) \to  \te{MU}(n). 
+$$ 
+The map $\gamma$ represents a canonical element g in $\Omega^{2n}_{U}(E,E^{\circ})$. We define the Thom isomorphism
+$$
+\phi\colon  \Omega^{q}_{U}(X) \to  \Omega^{q+2n}_{U}(E,E^{\circ})
+$$ 
+by $\phi(x) \in {(p^{\ast} x)g,}$ as usual. (See A. Dold, "Relations between Ordinary and Extraordinary Cohomology," Colloquium on Algebraic Topology, Aarhus 1962.)
+
+Only one thing remains before we have a fair grasp on the cohomology functor $\Omega^{}_{U};$ we need to know the coefficient groups $\Omega^{q}_{U}(P)$, where P is a point. In fact $\Omega^{\ast}_{U}(P)$ is a polynomial ring
+$$
+Z[x_1,x_2,\ldots,x_{i},\ldots],
+$$ 
+Where $x_{i} \in \Omega^{-2i}_{U}(P).$ A good grasp on $\Omega^{\ast}_{U}(P)$ is provided by the following authors: J. Milnor, "On the Cobordism Ring $\Omega^{\ast}$ and a Complex Analogue," Amer. Jour. Math. 82 (1960) pp 505-521; R. Stong, "Relations among Characteristic Numbers, I," Topology 4 (1965) pp 267-281; A, Hattori, "Integral characteristic numbers for weakly almost complex manifolds," Topology 5 (1966) pp 259-280.
+
+\end{document}

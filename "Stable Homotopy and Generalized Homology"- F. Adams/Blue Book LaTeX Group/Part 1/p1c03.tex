@@ -1,0 +1,42 @@
+\documentclass[../main]{subfiles}
+\begin{document}
+\label{sec:p1c3}
+
+\chapter{Homology}
+The Novikov operations are closely related to certain polynomials in the Conner-Floyd Chern classes. (These classes may be found in P.E. Conner and E.E. Floyd, loc. cit. pp 48-52.) It is convenient to begin by introducing the corresponding polynomials in the ordinary Chern classes.
+
+The Whitney sum map $\te{BU}(n) \times \te{BU}(m) \to \te{BU}(n+m)$ defines products in $H_{0}(\te{BU})$ defines products in $H_{ \ast}(\te{BU}).$ We have $\te{BU}(1) = CP^{\infty}$, so $H^*(\te{BU}(1))$ has a 
+Z-base consisting of elements $1,x,x^{2},x^{3},\ldots,$ where $x \in H^{2}(\te{BU}(1))$ is the generator. Take the dual base in $H_{\ast}(\te{BU}(1))$ and call it $b_0,b_1,b_2,b_3,\ldots .$ The Injection $\te{BU}(1) \to \te{BU}$ maps these elements into $H_{\ast}(\te{BU})$, where they can be multiplied. $H_{\ast}(\te{BU})$ has a Z-base consisting of the monomials 
+$$
+b_0^{v_1},b_1^{v_2},b_2^{v_3}\ldots \qquad \qquad (b_0=1)
+$$ 
+Take the dual base in $H^*{\te{BU}}$ and call its elements $c_{v};$ here the index $v$ runs through the sequences of integers 
+$$
+  v = (v_1,v_2,v_3,\ldots)
+$$ 
+in which all but a finite number of terms are zero. We have $c_{v}\in H^{2\|v\|}(\te{BU})$, where 
+$$
+  \|v\| = v_1 + 2v_2+ 3v_3+ \ldots
+$$ 
+If we take $v = (i, 0, 0, \ldots)$, we obtain the classical $i^{th}$ Chern class $c_{i}$. 
+
+We have thus given a base of $H^*{\te{BU}}$ which is well related to the Whitney sum map. This is obviously profitable in considering $\te{MU}$, Because in $H^*(\te{MU})$ we have a Whitney sump map but not a cup-product map. 
+
+For later use, we describe $H_{\ast}(\te{MU})$, which is defined by 
+$$
+  H_{2i}(\te{MU}) = \lim_{n \to \infty} H_{2n+2i}(\te{MU}(n)) 
+.$$ 
+The whitney sum map $\te{MU}(n) \wedge \te{MU}(m) \to \te{MU}(n+m)$ defines products in $H_{\ast}(\te{MU})$. The Thom isomorphism 
+$$
+  \phi\colon  H^q(\te{BU} ) \to  H^q(\te{MU} ) 
+,$$ 
+and similarly for homology. In particular, we have a "Thom isomorphism"
+$$
+  \phi\colon  H_{\ast}(\te{BU} )  \to  H_{\ast}(\te{MU} ) , 
+$$ 
+Which commutes with the products. Thus the ring $H_{0}(\te{MU}) $ is a polynomial ring on generators $b^{\prime}_0,b^{\prime}_1,b^{\prime}_2,b^{\prime}_3,\ldots ,$ corresponding to $b_0,b_1,b_2,b_3,\ldots $ under the Thom isomorphism. It is equivalent, of course, to describe these generators as follows: take the generators  $b_{i} \in H_{2i}(\te{BU}(1) ) $, take their images $b^{\prime}_{1}\in H_{2i+2}(\te{MU}(1))$ under the Thom isomorphism, and apply the injections
+$$
+  H_{2i+2}(\te{MU}(1) ) \to H_{2i}(\te{MU} )
+.$$
+Under the equivalence $\te{MU}(1) \sim \te{BU}(1)$, the class $b^{\prime}_{i} \in H_{2i+2}(\te{MU}(1))$ corresponds to $b_{i+1} \in H_{2i+2}(\te{MU}(1))$.
+\end{document}

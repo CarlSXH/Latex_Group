@@ -1,0 +1,36 @@
+\documentclass[../main]{subfiles}
+\begin{document}
+\label{sec:p1c4}
+
+\chapter{The Conner-Floyd Chern Classes}
+
+Conner and Floyd take a $U(n)$-bundle $\xi$ over a CW-complex $X$ and undertake to assign to it characteristic classes which lie, not in the ordinary cohomology $H^\ast(X)$, but in $\Omega_U^\ast(X)$.
+
+\begin{theorem}
+\label{thm:p1ch04.1}
+To each $\xi$ over $X$ and each $\alpha = (\alpha_1, \alpha_2, \alpha_3, \ldots)$ we can assign classes $\mathrm{cf}_\alpha(\xi) \in \Omega_U^{2 |\alpha|}(X)$, called the Conner-Floyd Chern classes, with the following properties: 
+
+\begin{enumerate}
+\item[(i)] $\mathrm{cf}_0(\xi) = 1$.
+\item[(ii)] Naturality: $\mathrm{cf}_\alpha(g^\ast \xi) = g^\ast \mathrm{cf}_\alpha (\xi)$.
+\item[(iii)] Whitney sum formula: $\displaystyle \mathrm{cf}_\alpha(\xi \oplus \eta) = \sum_{\beta + \gamma = \alpha} (\mathrm{cf}_\beta \xi) (\mathrm{cf}_\gamma \eta).$
+\item[(iv)] Let $\xi$ be a $U(1)$-bundle over $X$, classified by a map $X \lar{f} \mathrm{BU}(1)$, and let the composite $X \lar{f} \mathrm{BU}(1) \lar{} \mathrm{MU}(1)$ represent the element $\omega \in \Omega^2(X)$. Then $$\mathrm{cf}_\alpha(\xi) = \sum_{i \ge 0} (c_\alpha, b_i) \omega^i.$$
+\end{enumerate}
+\end{theorem} 
+
+\emph{Explanations.} In (iii), the addition of the sequences $\beta$ and $\gamma$ is done term-by-term; that is, if $$\beta = (\beta_1, \beta_2, \beta_3, \ldots),$$ $$\gamma = (\gamma_1, \gamma_2, \gamma_3, \ldots),$$ then $$\beta + \gamma = (\beta_1 + \gamma_1, \beta_2 + \gamma_2, \beta_3 + \gamma_3, \ldots).$$ The multiplication of $(\mathrm{cf}_\beta \xi)$ and $(\mathrm {cf}_\gamma \eta)$ is done in the ring $\Omega_U^\ast(X)$.
+
+In (iv), the map $\mathrm{BU}(1) \lar{} \mathrm{MU}(1)$ is the equivalence provided by Example~\ref{ex:p1c02.1}. The integer $(c_\alpha, b_i)$ is defined by the Kronecker pairing of $H^\ast(\mathrm{BU})$ and $H_\ast(\mathrm{BU})$ to $\mathbb Z$. The sum over $i$ is illusory; a non-zero contribution can arise only for $i = |\alpha|$. The formula merely means that $\mathrm{cf}_\alpha(\xi)$ is $\omega^{|\alpha|}$ if $\alpha$ has the form $(0, 0, 0, \ldots)$ or $(0, 0, \ldots, 0, 1, 0, \ldots)$, and otherwise zero. The use of coefficients like $(c_\alpha, b_i)$ is however convenient for doing algebra, and saves dividing cases.
+
+\begin{proof}[Sketch proof of Theorem~\ref{thm:p1ch04.1}]
+The Grothendieck method for defining the ordinary Chern classes work just as well in generalized cohomology, and defines $\mathrm{cf}_1$, $\mathrm{cf}_2$, $\mathrm{cf}_3$, $\ldots$. (See \plscite{Conner and Floyd, loc. cit.}). Of course, Conner and Floyd restrict their spaces to be finite CW-complexes (although their arguments apply unchanged to finite-dimensional CW-complexes.) It is therefore necesary to argue that $$\lim_q^1 \Omega_U^\ast ((\mathrm{BU}(n))^q) = 0,$$ so that $\mathrm{cf}_i$ defines an element of $\Omega_U^\ast(\mathrm{BU}(n))$ (or of $\Omega_U^\ast(\mathrm{BU})$, if required). Therefore $\mathrm{cf}_i$ is defined on all $U(n)$-bundles, by naturality. The same means is employed to extend the scope of conclusions (iii) and (iv) beyond the case considered by Conner and Floyd. It works because the appropriate $\mathrm{Lim}^1$ groups for $\mathrm{BU}(n) \times \mathrm{BU}(m)$ and $\mathrm{BU}(1)$ are zero. 
+
+So far we have only considered the classes $\mathrm{cf}_1$, $\mathrm{cf}_2$, $\mathrm {cf}_3$, $\ldots$. Now, each element in $H^\ast(\mathrm{BU})$ can be written as a unique polynomial in the ordinary Chern classes $c_1, c_2, c_3, \ldots$; say $$c_\alpha = P_\alpha(c_1, c_2, c_3, \ldots).$$ Define $\mathrm{cf}_\alpha$ to be the same polynomial in $\mathrm{cf}_1$, $\mathrm{cf}_2$, $\mathrm{cf}_3$, $\ldots$; that is, $$\mathrm{cf}_\alpha = P_\alpha(\mathrm{cf}_1, \mathrm{cf}_2, \mathrm{cf}_3, \ldots).$$ 
+
+Of course, one of the advantages claimed for the treatment above is that it avoids mentioning the algebra of symmetric polynomials. At the insistence of my friends, I explain the connection of the $P_\alpha$ with the symmetric polynomials. Let $\sigma_1, \sigma_2, \sigma_3, \ldots$ be the elementary symmetric functions in a sufficiency of variables $x_1, x_2, \ldots, x_n$; then $$P_\alpha(\sigma_1, \sigma_2 ,\sigma_3, \ldots) = \sum x_1^{m_1} x_2^{m_2} \ldots x_n^{m_n},$$ where the sum runs over $n$-tuples $(m_1, m_2, \ldots, m_n)$ such that $\alpha_1$ of the $m$'s are $1$, $\alpha_2$ of the $m$'s are $2$, and so on, while the rest of the $m$'s are $0$.
+
+Both for practical calculation and conceptual work I recommend the study of the dual rings $H_\ast(\mathrm{BU})$ and $H^\ast(\mathrm{BU})$ above the study of symmetric polynomials.
+
+Now that we have defined the classes $\mathrm{cf}_\alpha$, the Whitney sum formula (iii) is deduced from the special case $$\mathrm{cf}_k(\xi \oplus \eta) = \sum_{i + j = k} \mathrm{cf}_i (\xi) \mathrm{cf}_j (\eta)$$ by pure algebra, and similarly the behaviour on line bundles (iv) is deduced by algebra from the special case $$\mathrm{cf}_i(\xi) = \begin{cases}1 & i = 0 \\ \omega & i = 1 \\ 0 & i > 1.\end{cases}$$
+\end{proof} 
+\end{document}
